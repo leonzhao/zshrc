@@ -2,13 +2,14 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-  export ZSH=/home/leonzhao/.oh-my-zsh
+export ZSH=/home/leonzhao/.oh-my-zsh
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 ZSH_THEME="robbyrussell"
-# ZSH_THEME="agnoster.zsh-theme"
+#ZSH_THEME="agnoster"
+#ZSH_THEME="lambda-mod"
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
 
@@ -52,6 +53,7 @@ ZSH_THEME="robbyrussell"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git)
+plugins=(go)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -91,12 +93,47 @@ export PATH=$JAVA_HOME/bin:$PATH
 export CLASSPATH=.:$JAVA_HOME/lib
 
 #node env
-export NODE_HOME=/opt/node
+export NODE_HOME=/usr/local/node
 export PATH=$PATH:$NODE_HOME/bin
 export NODE_PATH=$NODE_HOME/lib/node_modules
 
+#go
+export GOPATH=~/workspace/go
+export PATH=$PATH:/usr/local/go/bin:$GOPATH/bin
 #android
 export ANDROID_HOME=~/Android/Sdk
 export PATH=${PATH}:${ANDROID_HOME}/tools
 export PATH=${PATH}:${ANDROID_HOME}/platform-tools
 
+#brew
+export PATH="$HOME/.linuxbrew/bin:$PATH"
+export MANPATH="$HOME/.linuxbrew/share/man:$MANPATH"
+export INFOPATH="$HOME/.linuxbrew/share/info:$INFOPATH"
+
+#leon bins
+export PATH=${PATH}:~/bin
+
+# added by Anaconda2 4.4.0 installer
+export PATH="/home/leonzhao/anaconda2/bin:$PATH"
+
+source ~/.alias.sh
+
+# Deactivate warnings about tensorflow
+export TF_CPP_MIN_LOG_LEVEL=2
+
+export PATH="~/anaconda2/bin:$PATH"
+
+#postgresql
+PATH=/usr/local/pgsql/bin:$PATH
+
+#v8 tools
+PATH=/home/leonzhao/workspace/github/v8/tools:$PATH
+
+K8S=$GOPATH/src/k8s.io
+export PATH
+#github leonzhao
+export LEONSPACE=$GOPATH/src/github.com/leonzhao
+
+#protobuf compile
+export PROTOC=/home/leonzhao/install/protoc
+export PATH=$PATH:/$PROTOC/bin
