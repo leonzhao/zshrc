@@ -1,8 +1,7 @@
-# If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
+# If you come frobash you might have to change your $PATH.  # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH=/home/leonzhao/.oh-my-zsh
+export ZSH=/home/leon/.oh-my-zsh
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
@@ -52,8 +51,10 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
-plugins=(go)
+plugins=(
+  git
+  go
+)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -62,9 +63,9 @@ source $ZSH/oh-my-zsh.sh
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
-# export LANG=en_US.UTF-8
-export LANG=zh_CN.UTF-8
-export LC_ALL=zh_CN.UTF-8
+export LANG=en_US.UTF-8
+#export LANG=zh_CN.UTF-8
+#export LC_ALL=zh_CN.UTF-8
 # Preferred editor for local and remote sessions
 # if [[ -n $SSH_CONNECTION ]]; then
 #   export EDITOR='vim'
@@ -100,31 +101,15 @@ export NODE_PATH=$NODE_HOME/lib/node_modules
 #go
 export GOPATH=~/workspace/go
 export PATH=$PATH:/usr/local/go/bin:$GOPATH/bin
-#android
-export ANDROID_HOME=~/Android/Sdk
-export PATH=${PATH}:${ANDROID_HOME}/tools
-export PATH=${PATH}:${ANDROID_HOME}/platform-tools
 
-#brew
-export PATH="$HOME/.linuxbrew/bin:$PATH"
-export MANPATH="$HOME/.linuxbrew/share/man:$MANPATH"
-export INFOPATH="$HOME/.linuxbrew/share/info:$INFOPATH"
+#ethereum
+export GETH_PATH=/home/leon/workspace/go/src/github.com/ethereum/go-ethereum
+export PATH=$PATH:$GETH_PATH/build/bin
 
 #leon bins
 export PATH=${PATH}:~/bin
 
-# added by Anaconda2 4.4.0 installer
-export PATH="/home/leonzhao/anaconda2/bin:$PATH"
-
-source ~/.alias.sh
-
-# Deactivate warnings about tensorflow
-export TF_CPP_MIN_LOG_LEVEL=2
-
-export PATH="~/anaconda2/bin:$PATH"
-
-#postgresql
-PATH=/usr/local/pgsql/bin:$PATH
+#source ~/.alias.sh
 
 #v8 tools
 PATH=/home/leonzhao/workspace/github/v8/tools:$PATH
